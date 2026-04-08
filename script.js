@@ -23,6 +23,29 @@ async function convertSky() {
                 });
                 zip.remove(optfine_path);
             }
+            zip.file('converted.txt', "pack converted using https://skyconverter.misumeh.com/ \nsource code: https://github.com/Misumeh/SkyConverter/");
+            // Change the "pack_format" variable in "pack.mcmeta"
+            let packmcmeta = zip.file('pack.mcmeta');
+            if (packmcmeta) {
+                try {
+                    // Get the content as text and remove the BOM if present
+                    let mcmetacontents = await packmcmeta.async('text');
+                    mcmetacontents = mcmetacontents.replace(/^\uFEFF/, '');
+
+                    const packmetajson = JSON.parse(mcmetacontents);
+                    packmetajson.pack.pack_format = parseInt(selectedVersion.value);
+                    zip.remove('pack.mcmeta');
+                    zip.file('pack.mcmeta', JSON.stringify(packmetajson, null, 4));
+                } catch (jsonError) {
+                    console.error('Error parsing JSON content:', jsonError);
+                    console.log('JSON content:', await packmcmeta.async('string'));
+                    alert('An error occurred while parsing JSON content. Check the browser console for more details.');
+                    return;
+                }
+            } else {
+                alert('A "pack.mcmeta" file was not found in the main folder.');
+                return;
+            }
             
             // Create a new compressed file
             const newZip = await zip.generateAsync({ type: 'blob' });

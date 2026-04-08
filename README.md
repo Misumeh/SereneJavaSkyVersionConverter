@@ -1,50 +1,58 @@
-# Minecraft Sky Converter
+# Serene - Java Sky Version Converter
 
-The Minecraft Sky Converter is a web-based tool that allows users to easily modify and adapt sky textures in Minecraft resource packs to different versions. This project simplifies the process of upgrading Minecraft resource packs for users who want to experience updated sky visuals.
+**Serene** is a modern, web-based tool designed for Minecraft resource pack creators. It automates the process of converting sky texture packs between different Java Edition versions, ensuring compatibility with the latest pack formats and folder structures.
 
-## Features
+![Serene Preview](Assets/s-preview.png)
 
-- **User-Friendly Interface**: The converter provides a simple and intuitive interface for users to upload their resource packs and select the desired Minecraft version.
-  
-- **Version Compatibility**: Supports a wide range of Minecraft versions, allowing users to choose the version they want to upgrade their resource packs to.
+-----
 
-- **Optifine Integration**: Automatically transforms the "mcpatcher" folder into "optifine" for seamless integration with Optifine.
+## 🚀 Features
 
-## How to Use
+  * **Version Compatibility**: Supports a wide range of Java versions, from legacy **1.6.1** up to the latest **26.1**.
+  * **Path Conversion**: Automatically handles **OptiFine** and **mcpatcher** path adjustments.
+  * **Live Feedback**: Includes a real-time console log and UI state updates to track the conversion process.
+  * **Modern Interface**: Built with a "Gothic Minimalist" and "Industrial-Cyberpunk" inspired aesthetic, featuring a glass-card layout and mobile-friendly design.
+  * **Fast Processing**: Provides instant UI feedback upon file inspection and conversion.
 
-1. Upload your Minecraft resource pack in ZIP format.
-2. Select the desired Minecraft version from the dropdown menu.
-3. Click the "Convert" button to initiate the conversion process.
-4. Download the converted resource pack with the updated sky textures.
+-----
 
-## FAQ
+## 🛠️ How to Use
 
-### Q: How does the Minecraft Sky Converter work?
+1.  **Upload**: Select your Minecraft sky resource pack in `.zip` format.
+2.  **Select Version**: Choose your target Java Edition version from the dropdown menu (e.g., 1.21.4, 26.1).
+3.  **Convert**: Click **Start Converting**. Monitor the **Live Console** for progress logs.
+4.  **Download**: Once the "Tool State" updates to completed, save your converted pack.
 
-A: The converter extracts, modifies, and compresses Minecraft resource packs to adapt sky textures to different versions.
+-----
 
-### Q: Can I use the converter for any Minecraft version?
+## 💻 Tech Stack
 
-A: The converter supports a range of Minecraft versions. Simply select the desired version from the dropdown menu.
+  * **Frontend**: HTML5, CSS3 (Glassmorphism), JavaScript.
+  * **Libraries**:
+      * `JSZip`: For handling `.zip` file compression and decompression.
+      * `Pako`: For high-speed ZLIB compression.
+      * `FontAwesome`: For iconography.
 
-### Q: Is there a way to support the project?
+-----
 
-A: Absolutely! Consider supporting the project with a donation at [Ko-Fi](https://ko-fi.com/misumeh).
+## 📂 Project Structure
 
-## Contributions
+  * `index.html`: The main tool interface.
+  * `styles.css`: Custom styling featuring a grass-inspired dark palette.
+  * `script.js`: Core logic for file processing and version mapping.
+  * `Assets/`: Brand assets including the Serene logo and banners.
 
-Contributions are welcome! If you have any ideas, bug fixes, or improvements, feel free to open an issue or submit a pull request.
+-----
 
-## License
+## 🤝 Support & Community
 
-This project is licensed under the [MIT License]([LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt).
+Serene is developed and maintained by **Misumeh**.
 
-## Changelog
+  * **Twitter**: [@Misumeh](https://twitter.com/Misumeh)
+  * **Discord**: [Join the community](https://discord.com/invite/wJWAgKxfrA)
+  * **GitHub**: [Source Code](https://github.com/Misumeh/SereneJavaSkyVersionConverter)
+  * **Donations**: If this tool saves you time, consider [supporting the project on Ko-fi](https://ko-fi.com/MisuPacks).
 
-### version 2.0.0
+-----
 
-- reworked HTML
-- reworked CSS
-- reworked JS
-- Literally reworked the entire thing
-- also you can downgrade now
+© 2026 Misumeh. All rights reserved.

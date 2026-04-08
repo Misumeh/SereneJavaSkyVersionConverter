@@ -4,139 +4,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Sky Converter</title>
+    <title>Serene - Java Sky Version Converter</title>
+    <meta name="description" content="Serene is the modern Java Sky Version Converter for Minecraft resource packs, built by Misumeh. Convert sky packs with visible state, console feedback, and support via Ko-fi.">
+    <meta name="keywords" content="Serene, Java Sky Version Converter, Minecraft sky pack converter, Misumeh, Ko-fi, Minecraft versions, sky resource pack">
+    <meta name="author" content="Misumeh">
+    <meta property="og:title" content="Serene - Java Sky Version Converter">
+    <meta property="og:description" content="Convert Minecraft sky packs across Java versions with a modern interface, step-by-step status, and console feedback.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Assets/s-banner.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="Assets/s-favicon.png">
 </head>
 
 <body>
     <header>
-        <div class="logo header_item">
-            <img src="https://github.com/Misumeh/SkyConverter/blob/main/favicon.png?raw=true"
-                alt="Minecraft Sky Converter Logo">
-            <a href="#mainSection" onclick="scrollToTop()">
+        <div class="header-left">
+            <a href="#hero" class="brand-link">
+                <img src="Assets/s-favicon.png" alt="Serene logo" class="header-logo">
+                <span>Serene</span>
             </a>
         </div>
-        <ul class="navcontainer header_item">
-            <li class="navitem"><a href="#features"><i class="fas fa-cogs"></i> Features</a></li>
-            <li class="navitem"><a href="#compatibility"><i class="fas fa-check"></i> Compatibility</a></li>
-            <li class="navitem"><a href="#donations"><i class="fas fa-donate"></i> Donate</a></li>
-        </ul>
-        <button class="btn header_item" onclick="joinDiscord()">
-            <a href="http://discord.misumeh.com/" target="_blank" "><i class=" fab fa-discord"></i> Join Discord</a>
-        </button>
+        <nav class="navcontainer">
+            <a class="navitem" href="#features"><i class="fas fa-cogs"></i> Features</a>
+            <a class="navitem" href="#howto"><i class="fas fa-book-open"></i> How to Use</a>
+            <a class="navitem" href="#support"><i class="fas fa-heart"></i> Support</a>
+        </nav>
+        <div class="header-right">
+            <a class="btn btn-ghost" href="https://ko-fi.com/MisuPacks" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-coffee"></i> Support Misumeh
+            </a>
+        </div>
     </header>
-    <section class="mainsection auto">
-        <div id="logoContainer" class="logo_container">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_Qf73tMWTeWfgZi9CTcndSHODDM1hrT8MIpoD9o3P_CLQQcMzPZV9t4a-btSKxXn8Lx4xwjO4IoidZ51WRpejCA23lSUzuCbjC-kmL-wyUVox0rXbnyqk0PuvAF3lJOpUQN1N8luoVS_V0P2UoXNB9-Fcf6cFloqy06mED4OSQSdc_S1DgK0K4MoeTp5h/s1600/Sky%20Converter%20Logo.png"
-                alt="Sky Converter Logo">
-        </div>
-        <div class="main">
-            <div class="file_input item">
-                <label for="archivoEntrada" class="btn">
-                    <i class="fas fa-upload"></i> Upload File
-                </label>
-                <input type="file" id="archivoEntrada" accept=".zip">
-            </div>
-            <div class="flex item">
-                <label for="versionSelector">Select the version:</label>
-                <select id="versionSelector">
-                    <option value="1">1.6.1–1.8.9</option>
-                    <option value="2">1.9–1.10.2</option>
-                    <option value="3">1.11–1.12.2</option>
-                    <option value="4">1.13–1.14.4</option>
-                    <option value="6">1.16.2–1.16.5</option>
-                    <option value="7">1.17–1.17.1</option>
-                    <option value="8">1.18–1.18.2</option>
-                    <option value="13">1.19.4</option>
-                    <option value="15" selected>1.20–1.20.1</option>
-                    <option value="18">1.20.2</option>
-                    <option value="22">1.20.3–1.20.4</option>
-                </select>
-            </div>
-            <div class="item">
-                <button onclick="convertSky()" class="btn">
-                    <i class="fas fa-magic"></i> Convert
-                </button>
-            </div>
-        </div>
-    </section>
-    <section class="features_container auto">
-        <section id="features" class="features">
-            <div class="container">
-                <div class="center">
-                    <i class="fas fa-cogs"></i>
-                    <h2>Features</h2>
-                    <h3>Discover the features of the converter.</h3>
-                </div>
-                <div class="center">
-                    <ul>
-                        <li><i class="fas fa-check"></i> Easy conversion of Minecraft Sky Files</li>
-                        <li><i class="fas fa-check"></i> Supports multiple Minecraft versions</li>
-                        <li><i class="fas fa-check"></i> Automatic modification of folder structure</li>
-                        <li><i class="fas fa-check"></i> Optifine Mcpatcher Supported</li>
-                        <li><i class="fas fa-check"></i> Converts pack.mcmeta to the version selected</li>
-                        <li><i class="fas fa-check"></i> User-friendly interface for a seamless experience</li>
-                    </ul>
+                <img src="Assets/s-logo.png" alt="Serene logo" class="hero-logo">
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Java Sky Version Converter</span>
+                <h1>Serene</h1>
+                <p>Convert Minecraft sky packs between Java versions with fast state feedback, a live console, and a modern UI.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#tool"><i class="fas fa-play"></i> Start Converting</a>
+                    <a class="btn btn-secondary" href="https://ko-fi.com/MisuPacks" target="_blank" rel="noopener noreferrer"><i class="fas fa-mug-hot"></i> Buy me a coffee</a>
                 </div>
             </div>
-            <div id="compatibility" class="container">
-                <div class="center">
-                    <i class="fas fa-check"></i>
-                    <h2>Compatibility</h2>
-                    <h3>Check which Minecraft versions are supported.</h3>
-                </div>
-                <div class="center">
-                    <ul>
-                        <li><i class="fas fa-check"></i> Switch to 1.6.1 – 1.8.9</li>
-                        <li><i class="fas fa-check"></i> Switch to 1.9 – 1.10.2</li>
-                        <li><i class="fas fa-check"></i> Switch to 1.13 – 1.14.4 </li>
-                        <li><i class="fas fa-check"></i> Switch to 1.16.2 – 1.16.5</li>
-                        <li><i class="fas fa-check"></i> Switch to 1.17 - 1.17.1 </li>
-                        <li><i class="fas fa-check"></i> Switch to 1.18 - 1.18.2 </li>
-                        <li><i class="fas fa-check"></i> Switch to 1.19.4 </li>
-                        <li><i class="fas fa-check"></i> Switch to 1.20.1.</li>
-                        <li><i class="fas fa-check"></i> Switch to 1.20.2 </li>
-                        <li><i class="fas fa-check"></i> Switch to 1.20.4 </li>
-                    </ul>
+            <div class="img-container">
+                <div class="hero-card glass-card">
+                    <div class="hero-card-header">
+                        <div>
+                            <p class="card-label">Latest supported</p>
+                            <h2>26.1</h2>
+                        </div>
+                        <span class="status-badge status-live"><i class="fas fa-sun"></i> Live</span>
+                    </div>
+                    <p>Serene keeps your sky textures compatible across the latest Java pack versions with visible status and console logs.</p>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <span>Fast</span>
+                            <strong>Instant UI feedback</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Clear</span>
+                            <strong>Status and console output</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <div id="donations" class="container donations">
-            <div class="center">
-                <i class="fas fa-donate"></i>
-                <h2>Donations</h2>
+
+        <section class="tool-section glass-card" id="tool">
+            <div class="tool-header">
+                <div>
+                    <span class="eyebrow">Conversion Studio</span>
+                    <h2>Upload your sky pack and convert it safely</h2>
+                </div>
+                <div class="tool-state">
+                    <span class="state-label">Tool state</span>
+                    <strong id="toolState">Waiting for file</strong>
+                </div>
             </div>
-            <p>If you find this converter helpful, consider supporting the development with a small donation. Every
-                contribution is
-                appreciated!</p>
-            <div class="center">
-                <a href="https://ko-fi.com/misumeh" target="_blank" rel="noopener noreferrer">
-                    <button class="btn">
-                        <i class="fas fa-coffee"></i> Support me on Ko-Fi
+            <div class="tool-grid">
+                <div class="tool-panel">
+                    <label for="archivoEntrada" class="btn btn-primary file-button">
+                        <i class="fas fa-upload"></i> Choose .zip file
+                    </label>
+                    <input type="file" id="archivoEntrada" accept=".zip">
+
+                    <label for="versionSelector" class="field-label">Select target version</label>
+                    <select id="versionSelector">
+                        <option value="1">1.6.1–1.8.9</option>
+                        <option value="2">1.9–1.10.2</option>
+                        <option value="3">1.11–1.12.2</option>
+                        <option value="4">1.13–1.14.4</option>
+                        <option value="6">1.16.2–1.16.5</option>
+                        <option value="7">1.17–1.17.1</option>
+                        <option value="8">1.18–1.18.2</option>
+                        <option value="13">1.19.4</option>
+                        <option value="15">1.20–1.20.1</option>
+                        <option value="18">1.20.2</option>
+                        <option value="22">1.20.3–1.20.4</option>
+                        <option value="41">1.20.5–1.20.6</option>
+                        <option value="48">1.21–1.21.1</option>
+                        <option value="57">1.21.2–1.21.3</option>
+                        <option value="61">1.21.4</option>
+                        <option value="71">1.21.5</option>
+                        <option value="80">1.21.6</option>
+                        <option value="81">1.21.7–1.21.8</option>
+                        <option value="88.0">1.21.9–1.21.10</option>
+                        <option value="94.1">1.21.11</option>
+                        <option value="101.1" selected>26.1</option>
+                    </select>
+                    <button id="convertButton" onclick="convertSky()" class="btn btn-secondary btn-large">
+                        <i class="fas fa-magic"></i> Convert Now
                     </button>
-                </a>
+                </div>
+                <div class="status-panel">
+                    <div class="status-card">
+                        <span class="panel-title">Selected file</span>
+                        <p id="selectedFile">No file selected</p>
+                    </div>
+                    <div class="status-card">
+                        <span class="panel-title">Selected version</span>
+                        <p id="selectedVersion">1.20–1.20.1</p>
+                    </div>
+                    <div class="status-card">
+                        <span class="panel-title">Conversion status</span>
+                        <p id="conversionStatus">Ready to convert</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="console-panel">
+                <div class="console-header">
+                    <div>
+                        <span class="eyebrow">Live Console</span>
+                        <h3>Conversion log</h3>
+                    </div>
+                    <span class="console-badge"><i class="fas fa-terminal"></i> active</span>
+                </div>
+                <div id="consoleOutput" class="console-output"></div>
+            </div>
+        </section>
+
+        <section class="info-grid" id="howto">
+            <article class="glass-card feature-card">
+                <i class="fas fa-file-upload feature-icon"></i>
+                <h3>Upload</h3>
+                <p>Select your Minecraft sky resource pack ZIP and let Serene inspect it instantly.</p>
+            </article>
+            <article class="glass-card feature-card">
+                <i class="fas fa-sliders-h feature-icon"></i>
+                <h3>Choose Version</h3>
+                <p>Pick the target Java version for your sky pack and prepare for a safe conversion.</p>
+            </article>
+            <article class="glass-card feature-card">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <h3>Convert</h3>
+                <p>Press convert and watch the status update in the tool state panel and console.</p>
+            </article>
+        </section>
+
+        <section class="features_container" id="features">
+            <div class="feature-block glass-card">
+                <div class="center-block">
+                    <i class="fas fa-cogs"></i>
+                    <h2>Features</h2>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Fixed support for Java sky pack conversions</li>
+                    <li><i class="fas fa-check"></i> Live UI state and console feedback</li>
+                    <li><i class="fas fa-check"></i> Transparent card design with grass-inspired palette</li>
+                    <li><i class="fas fa-check"></i> Supports OptiFine / mcpatcher path conversion</li>
+                    <li><i class="fas fa-check"></i> Mobile-friendly layout and modern animations</li>
+                </ul>
+            </div>
+            <div class="feature-block glass-card" id="compatibility">
+                <div class="center-block">
+                    <i class="fas fa-check"></i>
+                    <h2>Compatibility</h2>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check"></i> 1.20.5–1.20.6</li>
+                    <li><i class="fas fa-check"></i> 1.21–1.21.1</li>
+                    <li><i class="fas fa-check"></i> 1.21.2–1.21.3</li>
+                    <li><i class="fas fa-check"></i> 1.21.4</li>
+                    <li><i class="fas fa-check"></i> 1.21.5</li>
+                    <li><i class="fas fa-check"></i> 1.21.6</li>
+                    <li><i class="fas fa-check"></i> 1.21.7–1.21.8</li>
+                    <li><i class="fas fa-check"></i> 1.21.9–1.21.10</li>
+                    <li><i class="fas fa-check"></i> 1.21.11</li>
+                    <li><i class="fas fa-check"></i> 26.1</li>
+                </ul>
+            </div>
+            <div class="feature-block glass-card" id="support">
+                <div class="center-block">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h2>Support</h2>
+                </div>
+                <p>Serene is made by Misumeh. If the tool helps you build faster, support the project on Ko-fi and help keep updates coming.</p>
+                <div class="center">
+                    <a class="btn btn-primary" href="https://ko-fi.com/MisuPacks" target="_blank" rel="noopener noreferrer"><i class="fas fa-coffee"></i> Support on Ko-fi</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Serene</h3>
+                <p>Java Sky Version Converter by Misumeh. Built for creators who want clean, modern, and reliable pack conversion.</p>
+            </div>
+            <div class="social-icons">
+                <a class="social-item" href="https://twitter.com/Misumeh" title="Follow on Twitter"><i class="fab fa-twitter"></i></a>
+                <a class="social-item" href="https://discord.com/invite/wJWAgKxfrA" title="Join the Discord"><i class="fab fa-discord"></i></a>
+                <a class="social-item" href="https://github.com/Misumeh/SereneJavaSkyVersionConverter" title="Source code"><i class="fab fa-github"></i></a>
             </div>
         </div>
-    </section>
-    <footer>
-        <div class="social-icons">
-            <a class="social-item" href="https://twitter.com/Misumeh" class="icon" title="Follow us on Twitter"><i
-                    class="fab fa-twitter"></i></a>
-            <a class="social-item" href="https://discord.com/invite/wJWAgKxfrA" class="icon" title="Join our discord"><i
-                    class="fab fa-discord"></i></a>
-            <a class="social-item" href="https://www.youtube.com/channel/UCggw7dOBxtMknom1cmFfRyQ" class="icon"
-                title="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
-            <a class="social-item" href="https://github.com/Misumeh/SkyConverter" class="text" title="Source Code"><i
-                    class="fab fa-github"></i></a>
-        </div>
-        <p>&copy; 2024 Misumeh. All rights reserved. | By a Creator, for Creators.</p>
+        <p>&copy; 2026 Misumeh. All rights reserved.</p>
     </footer>
+
     <script src="jszip.min.js"></script>
     <script src="pako.min.js"></script>
     <script src="script.js"></script>
 </body>
 
 </html>
-</body>
